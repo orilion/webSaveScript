@@ -8,7 +8,7 @@ date = time.strftime('%d-%m-%y %H:%M',time.localtime());
 def verif(diretory,nbSave):
 	exit = os.popen("ls -t "+diretory,"r").readlines();
 	array = [line.rstrip('\n').split(',') for line in exit];
-	if len(array) >= nbSave
+	if len(array) >= int(nbSave)
 		str = "".join(array[len(array)-1]);
 		os.system("rm -r "+diretory+"/"+str);
 
